@@ -3,6 +3,7 @@
 This plugin is developed for the anti-debug mechanism in Ionic and Cordova applications by detecting debugging and closing the application.
 
 ** Many functions have not been developed.
+
 ** Not updated or fixed if any problems are found.
 
 ##### Support
