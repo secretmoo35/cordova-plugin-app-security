@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-app-security",
+  "version": "1.0.0",
+  "description": "Cordova Plugin for App Security",
+  "cordova": {
+    "id": "cordova-plugin-app-security",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "sarayut.kungsaranuwat@gmail.com",
+  "license": "ISC"
+}

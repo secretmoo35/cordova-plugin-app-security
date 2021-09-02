@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-app-security" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AppSecurityPlugin</name>
+    <js-module name="AppSecurityPlugin" src="www/AppSecurityPlugin.js">
+        <clobbers target="cordova.plugins.AppSecurityPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="AppSecurityPlugin">
+                <param name="ios-package" value="AppSecurityPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/AppSecurityPlugin.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/DebuggerChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/EmulatorChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/FishHookChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/IntegrityChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/IOSSecuritySuite.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/JailbreakChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/MSHookFunctionChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/ProxyChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/ReverseEngineeringToolsChecker.swift" />
+        <source-file src="src/ios/IOSSecuritySuite/RuntimeHookChecker.swift" />
+        <header-file src="src/ios/IOSSecuritySuite/IOSSecuritySuite.h" />
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AppSecurityPlugin">
+                <param name="android-package" value="cordova.plugin.app.security.AppSecurityPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/AppSecurityPlugin.java" target-dir="src/cordova.plugin.app.security/AppSecurityPlugin" />
+    </platform>
+</plugin>
