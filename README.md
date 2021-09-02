@@ -30,6 +30,7 @@ cordova.plugins.AppSecurityPlugin.denyReverseEngineered();
 
 ##### Credit
 Android : https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md
+
 iOS : https://github.com/securing/IOSSecuritySuite
 
 ##### Runtime Mobile Exploration
