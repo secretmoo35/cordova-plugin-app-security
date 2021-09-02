@@ -24,6 +24,16 @@
         <source-file src="src/ios/IOSSecuritySuite/ReverseEngineeringToolsChecker.swift" />
         <source-file src="src/ios/IOSSecuritySuite/RuntimeHookChecker.swift" />
         <header-file src="src/ios/IOSSecuritySuite/IOSSecuritySuite.h" />
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>cydia</string>
+                <string>undecimus</string>
+                <string>sileo</string>
+                <string>zbra</string>
+                <string>filza</string>
+                <string>activator</string>
+            </array>
+        </config-file>
     </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
