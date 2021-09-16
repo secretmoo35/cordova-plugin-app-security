@@ -5,7 +5,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult.Status;
 import org.apache.cordova.PluginResult;
-import org.apache.cordova.LOG;
+// import org.apache.cordova.LOG;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,12 +33,12 @@ public class AppSecurityPlugin extends CordovaPlugin {
     }
 
     private void detectDebuggingAndDenyDebugger(CallbackContext callbackContext) {
-        LOG.d("AppSecurityPlugin", "Checking");
+        // LOG.d("AppSecurityPlugin", "Checking");
         new Timer().scheduleAtFixedRate(new TimerTask(){
             @Override
             public void run(){
                 Boolean isDebuggerAttached = Debug.isDebuggerConnected() || Debug.waitingForDebugger() || (!BuildConfig.DEBUG && ((ApplicationInfo.FLAG_DEBUGGABLE) != 0));
-                LOG.d("AppSecurityPlugin", "Checked Result : " + isDebuggerAttached);
+                // LOG.d("AppSecurityPlugin", "Checked Result : " + isDebuggerAttached);
                 if(isDebuggerAttached){
                     System.exit(0);
                 }
