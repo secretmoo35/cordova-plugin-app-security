@@ -37,7 +37,7 @@ public class AppSecurityPlugin extends CordovaPlugin {
         new Timer().scheduleAtFixedRate(new TimerTask(){
             @Override
             public void run(){
-                Boolean isDebuggerAttached = Debug.isDebuggerConnected() || Debug.waitingForDebugger() || (!BuildConfig.DEBUG && ((ApplicationInfo.FLAG_DEBUGGABLE) != 0));
+                Boolean isDebuggerAttached = Debug.isDebuggerConnected() || Debug.waitingForDebugger();
                 // LOG.d("AppSecurityPlugin", "Checked Result : " + isDebuggerAttached);
                 if(isDebuggerAttached){
                     System.exit(0);
