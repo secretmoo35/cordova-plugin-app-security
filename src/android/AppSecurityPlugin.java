@@ -1,6 +1,6 @@
 package cordova.plugin.app.security;
 
-import org.apache.cordova.BuildConfig;
+// import org.apache.cordova.BuildConfig;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult.Status;
