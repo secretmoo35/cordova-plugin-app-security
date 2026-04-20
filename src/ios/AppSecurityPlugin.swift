@@ -72,6 +72,18 @@
 
   self.commandDelegate!.send(pluginResult, callbackId: command.callbackId) 
   }
+
+  @objc(isDeviceCompromised:)
+  func isDeviceCompromised(_ command: CDVInvokedUrlCommand) {
+    let isJailbroken: Bool = IOSSecuritySuite.amIJailbroken()
+
+    let pluginResult = CDVPluginResult(
+        status: CDVCommandStatus_OK,
+        messageAs: isJailbroken
+    )
+
+    self.commandDelegate!.send(pluginResult, callbackId: command.callbackId)
+  }
 }
 
 
