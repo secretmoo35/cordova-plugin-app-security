@@ -22,5 +22,9 @@ AppSecurityPlugin.denyReverseEngineered = function (onSuccess, onError) {
     exec(onSuccess, onError, "AppSecurityPlugin", "denyReverseEngineered", []);
 };
 
+AppSecurityPlugin.isDeviceCompromised = function (onSuccess, onError) {
+    exec(onSuccess, onError, "AppSecurityPlugin", "isDeviceCompromised", []);
+};
+
 module.exports = AppSecurityPlugin;
 
